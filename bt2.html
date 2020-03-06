@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        h1
+        {
+            background-color: green;
+            width: 400px;
+        }
       table
       {
           border-collapse: collapse;
+          width: 400px;
+          height: 500px;
+      }
+      input[type="submit"]
+      {
+          width: 60px;
+          margin-top:2px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
       }
     </style>
 </head>
 <body>
     <h1>Đăng kí thành viên</h1>
+    <form action="//link" method="post" >
+        <!-- 9 methods http -->
     <table border="1">
         <th>
            Nội dung
@@ -40,7 +56,7 @@
          </tr>
          <tr>
              <td>Avatar</td>
-             <td><input type="file"></td>
+             <td><input type="file" multiple ></td>
          </tr>
          <tr>
              <td>Số điện thoại</td>
@@ -50,38 +66,39 @@
              <td>Tuổi</td>
              <td>
                  <select>
-                     <option value="">1 tuổi</option>
-                     <option value="">2 tuổi</option>
-                     <option value="">3 tuổi</option>
-                     <option value="">4 tuổi</option>
-                     <option value="">5 tuổi</option>
+                     <option value="1">1 tuổi</option>
+                     <option selected value="2">2 tuổi</option>
+                     <option value="3">3 tuổi</option>
+                     <option value="4">4 tuổi</option>
+                     <option value="5">5 tuổi</option>
+                     <!-- gia trị submit value -->
                  </select>
              </td>
          </tr>
          <tr>
              <td>Giới tính</td>
              <td>
-                 <input type="radio" value="nam" name="giới tính" checked> <span>nam</span> <br>
-                 <input type="radio" value="nam" name="giới tính"> <span>nữ</span>
-                 
+                 <input type="radio" value="nam" name="giới tính"> <span>nam</span> <br>
+                 <input type="radio" value="nam" name="giới tính"> <span>nữ</span> 
+                 <!-- trai qua phai tren xuong duoi -->
              </td>
          </tr>
          <tr>
              <td>Sở Thích</td>
              <td>
-                 <input type="checkbox"> <span>Đá bóng </span> <br>
+                 <input type="checkbox" checked> <span>Đá bóng </span> <br>
                  <input type="checkbox"> <span>cầu lông </span> <br>
-
                  <input type="checkbox"> <span>đua thuyền </span> <br>
-
              </td>
          </tr>
          <tr>
              <td>Ghi chú</td>
              <td>
-                <textarea name="first lesson" id="" cols="30" rows="10">buổi học đâu tiên</textarea>
+                <textarea name="first lesson" id="" cols="30" rows="10"placeholder="bai hoc dau tien" ></textarea>
              </td>
          </tr>
     </table>
+    <input type="submit">
+</form>
 </body>
 </html>
